@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Itim&family=Noto+Sans+Thai+Looped:wght@100;200;300;400;500;600;700;800;900&family=Noto+Sans+Thai:wght@100..900&family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../img-web/_1701a10a-b022-4af5-a9cd-26fba7828749-removebg-preview.png"
+        type="image/x-icon">
+    <title>Lucky LoTo</title>
+</head>
+
+<body>
+  <nav class="navbar bg-body-black fixed-top">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+            <img src="../img-web/_1701a10a-b022-4af5-a9cd-26fba7828749-removebg-preview.png" alt="" height="60" width="60">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Luck Loto</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              <div class="container">
+                <div class="row d-flex justify-content-center">
+                    <div class="card-menu">
+                      <div class="row" style="height: 200px; margin-top: 20px;">
+                        <label for="" style="color: #FFD700;">User: NERXID</label>
+                        <label for="" style="color: #FFD700;">Email: 6541470010@dru.ac.th</label>
+                        <label for="" style="color: #FFD700;">เครดิตคงเหลือ: 2,000,000 ฿</label>
+                      </div>
+                    </div>
+                </div>
+                <div class="row d-flex justify-content-center mt-5">
+                  <div class="row text-center">
+                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                      <li class="nav-item mb-4">
+                        <a class="nav-link active" aria-current="page" href="../login-verifly.html"><h5>หน้าเเรก</h5></a>
+                      </li>
+                      <li class="nav-item mb-4">
+                        <a class="nav-link" href="Purchase-history.html"><h5>ประวัติการซื้อ</h5></a>
+                      </li>
+                      <li class="nav-item mb-4">
+                        <a href="select-add-money.html"><h5>เติมเงิน</h5></a>
+                      </li>
+                      <br>
+                      <li class="nav-item mb-4">
+                        <a href="http://"><h5>ออกจากระบบ</h5></a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+    </div>
+</nav>
+
+
+    <div class="container login">
+        <div class="row">
+            <div class="col-12">
+                <div class="row d-flex justify-content-center">
+                  <div class="col d-flex justify-content-center">
+                    <div class="card text-center" style="width: 500px; border-radius: 10px;">
+                      <h2>กรุณาเลือกช่องทางการเติมเงิน</h2>
+                      <br>
+                      <div class="row">
+                        <button class="btn btn-success" style="background: #134E95; height: 40px;" onclick="showPopup()">PromPay QR - code</button>
+                      </div>
+                      <div class="row">
+                        <button  class="btn btn-success" style="background: #EE4D2D; height: 40px;" onclick="showPopup()" >Shopee</button>
+                      </div>
+                      <div class="row">
+                        <button class="btn btn-success" style="background: #FF0000; height: 40px;" onclick="showPopup()">True Money</button>
+                      </div>
+                      <div class="row">
+                        <button class="btn btn-success" style="background: #0079C1; height: 40px;" onclick="showPopup()">Pay Pal</button>
+                      </div>
+                      <di class="row d-flex justify-content-center mt-5">
+                        <a class="btn btn-light" aria-current="page" href="../login-verifly.html">กลับ</a>
+                      </di>
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="lay-out-popup">
+        <div class="overlay"></div> <!-- Overlay -->
+        <div class="container">
+            <div class="row d-flex justify-content-center">
+                <div class="card text-center popup" style="width: 400px; z-index: 1001; top: 100px; position: fixed;">
+                    <div class="mb-3">
+                        <label for="formGroupExampleInput" class="form-label" style="color: black;">กรุณากรอกจำนวนเงิน</label>
+                        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="">
+                    </div>
+                    <div class="mb-3 d-flex justify-content-center">
+                        <img src="/img-web/QR_code_for_mobile_English_Wikipedia.svg" width="200" height="200" alt="" class="QR-CODE">
+                    </div>
+                    <br>
+                    <div class="mb-3 d-flex justify-content-center">
+                        <label class="text-scan">โปรดสเเกนภายใน 14:59:10</label>
+                    </div>
+                    <div class="mb-3">
+                        <button onclick="genqr()"  class="btn btn-success">สร้าง QR-CODE</button>
+                    </div>
+                    <div class="mb-3">
+                        <button onclick="hidePopup()" class="btn btn-secondary">กลับ</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+            crossorigin="anonymous"></script>
+            <script src="../js/index.js"></script>
+</body>
+
+</html>
